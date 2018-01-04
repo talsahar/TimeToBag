@@ -7,21 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C327A30ED1E63C3D36672F /* Pods_TimeToBagV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */; };
+		8411D90C1FFEDD8500DAFD90 /* FirebaseFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F01FFEDD8400DAFD90 /* FirebaseFileStore.swift */; };
+		8411D90D1FFEDD8500DAFD90 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F11FFEDD8400DAFD90 /* LocalFileStore.swift */; };
+		8411D90E1FFEDD8500DAFD90 /* ModelFilesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F21FFEDD8400DAFD90 /* ModelFilesStore.swift */; };
+		8411D90F1FFEDD8500DAFD90 /* VacationTypeDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F41FFEDD8400DAFD90 /* VacationTypeDataGenerator.swift */; };
+		8411D9101FFEDD8500DAFD90 /* WeatherDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F51FFEDD8400DAFD90 /* WeatherDataGenerator.swift */; };
+		8411D9111FFEDD8500DAFD90 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F71FFEDD8400DAFD90 /* Bag.swift */; };
+		8411D9121FFEDD8500DAFD90 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F91FFEDD8400DAFD90 /* Weather.swift */; };
+		8411D9131FFEDD8500DAFD90 /* VacationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8FA1FFEDD8400DAFD90 /* VacationType.swift */; };
+		8411D9141FFEDD8500DAFD90 /* MyAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8FC1FFEDD8400DAFD90 /* MyAuthentication.swift */; };
+		8411D9151FFEDD8500DAFD90 /* HomeTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8FF1FFEDD8400DAFD90 /* HomeTabTableViewController.swift */; };
+		8411D9161FFEDD8500DAFD90 /* SettingsTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9001FFEDD8400DAFD90 /* SettingsTabTableViewController.swift */; };
+		8411D9171FFEDD8500DAFD90 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9021FFEDD8400DAFD90 /* MainTabBarViewController.swift */; };
+		8411D9181FFEDD8500DAFD90 /* GlobalTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9031FFEDD8400DAFD90 /* GlobalTabViewController.swift */; };
+		8411D9191FFEDD8500DAFD90 /* CreateBagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9041FFEDD8400DAFD90 /* CreateBagTableViewController.swift */; };
+		8411D91A1FFEDD8500DAFD90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9051FFEDD8400DAFD90 /* LoginViewController.swift */; };
+		8411D91B1FFEDD8500DAFD90 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9071FFEDD8400DAFD90 /* MyCell.swift */; };
+		8411D91C1FFEDD8500DAFD90 /* PressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9081FFEDD8400DAFD90 /* PressableButton.swift */; };
+		8411D91D1FFEDD8500DAFD90 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D9091FFEDD8400DAFD90 /* ScaleSegue.swift */; };
+		8411D91E1FFEDD8500DAFD90 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D90A1FFEDD8400DAFD90 /* MyTextField.swift */; };
+		8411D91F1FFEDD8500DAFD90 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D90B1FFEDD8400DAFD90 /* Toast.swift */; };
 		8417233E1FF809D900811221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417233D1FF809D900811221 /* AppDelegate.swift */; };
-		841723401FF809D900811221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417233F1FF809D900811221 /* ViewController.swift */; };
-		841723431FF809D900811221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841723411FF809D900811221 /* Main.storyboard */; };
-		841723451FF809D900811221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841723441FF809D900811221 /* Assets.xcassets */; };
 		841723481FF809D900811221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841723461FF809D900811221 /* LaunchScreen.storyboard */; };
+		841723501FF80A3A00811221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8417234F1FF80A3A00811221 /* GoogleService-Info.plist */; };
+		844820C11FFAF02300597591 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 844820C01FFAF02300597591 /* libsqlite3.0.tbd */; };
+		84B7DD481FF80D58006F174F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD471FF80D58006F174F /* Main.storyboard */; };
+		84B7DD5D1FF84FD6006F174F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD5C1FF84FD6006F174F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeToBagV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F3B9C07B87FDDB1F0087DC /* Pods-TimeToBagV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToBagV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1.debug.xcconfig"; sourceTree = "<group>"; };
+		77AB88A75EA25E9D4C4E4DDD /* Pods-TimeToBagV1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToBagV1.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1.release.xcconfig"; sourceTree = "<group>"; };
+		8411D8F01FFEDD8400DAFD90 /* FirebaseFileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseFileStore.swift; sourceTree = "<group>"; };
+		8411D8F11FFEDD8400DAFD90 /* LocalFileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFileStore.swift; sourceTree = "<group>"; };
+		8411D8F21FFEDD8400DAFD90 /* ModelFilesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFilesStore.swift; sourceTree = "<group>"; };
+		8411D8F41FFEDD8400DAFD90 /* VacationTypeDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacationTypeDataGenerator.swift; sourceTree = "<group>"; };
+		8411D8F51FFEDD8400DAFD90 /* WeatherDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataGenerator.swift; sourceTree = "<group>"; };
+		8411D8F71FFEDD8400DAFD90 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		8411D8F91FFEDD8400DAFD90 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		8411D8FA1FFEDD8400DAFD90 /* VacationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacationType.swift; sourceTree = "<group>"; };
+		8411D8FC1FFEDD8400DAFD90 /* MyAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAuthentication.swift; sourceTree = "<group>"; };
+		8411D8FF1FFEDD8400DAFD90 /* HomeTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabTableViewController.swift; sourceTree = "<group>"; };
+		8411D9001FFEDD8400DAFD90 /* SettingsTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTabTableViewController.swift; sourceTree = "<group>"; };
+		8411D9021FFEDD8400DAFD90 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		8411D9031FFEDD8400DAFD90 /* GlobalTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabViewController.swift; sourceTree = "<group>"; };
+		8411D9041FFEDD8400DAFD90 /* CreateBagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBagTableViewController.swift; sourceTree = "<group>"; };
+		8411D9051FFEDD8400DAFD90 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8411D9071FFEDD8400DAFD90 /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		8411D9081FFEDD8400DAFD90 /* PressableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressableButton.swift; sourceTree = "<group>"; };
+		8411D9091FFEDD8400DAFD90 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
+		8411D90A1FFEDD8400DAFD90 /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		8411D90B1FFEDD8400DAFD90 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		8417233A1FF809D900811221 /* TimeToBagV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeToBagV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8417233D1FF809D900811221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8417233F1FF809D900811221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		841723421FF809D900811221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		841723441FF809D900811221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841723471FF809D900811221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841723491FF809D900811221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8417234F1FF80A3A00811221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		844820C01FFAF02300597591 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		844820C21FFAF07900597591 /* TimeToBagV1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeToBagV1-Bridging-Header.h"; sourceTree = "<group>"; };
+		84B7DD471FF80D58006F174F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84B7DD5C1FF84FD6006F174F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +76,127 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844820C11FFAF02300597591 /* libsqlite3.0.tbd in Frameworks */,
+				68C327A30ED1E63C3D36672F /* Pods_TimeToBagV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09BF0B0A79EDF827CE5F7ADD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66F3B9C07B87FDDB1F0087DC /* Pods-TimeToBagV1.debug.xcconfig */,
+				77AB88A75EA25E9D4C4E4DDD /* Pods-TimeToBagV1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8411D8EE1FFEDD8400DAFD90 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8EF1FFEDD8400DAFD90 /* fileManagment */,
+				8411D8F31FFEDD8400DAFD90 /* dataGenerators */,
+				8411D8F61FFEDD8400DAFD90 /* data */,
+				8411D8FB1FFEDD8400DAFD90 /* authentication */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8411D8EF1FFEDD8400DAFD90 /* fileManagment */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8F01FFEDD8400DAFD90 /* FirebaseFileStore.swift */,
+				8411D8F11FFEDD8400DAFD90 /* LocalFileStore.swift */,
+				8411D8F21FFEDD8400DAFD90 /* ModelFilesStore.swift */,
+			);
+			path = fileManagment;
+			sourceTree = "<group>";
+		};
+		8411D8F31FFEDD8400DAFD90 /* dataGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8F41FFEDD8400DAFD90 /* VacationTypeDataGenerator.swift */,
+				8411D8F51FFEDD8400DAFD90 /* WeatherDataGenerator.swift */,
+			);
+			path = dataGenerators;
+			sourceTree = "<group>";
+		};
+		8411D8F61FFEDD8400DAFD90 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8F71FFEDD8400DAFD90 /* Bag.swift */,
+				8411D8F81FFEDD8400DAFD90 /* New Group */,
+				8411D8F91FFEDD8400DAFD90 /* Weather.swift */,
+				8411D8FA1FFEDD8400DAFD90 /* VacationType.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		8411D8F81FFEDD8400DAFD90 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8411D8FB1FFEDD8400DAFD90 /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8FC1FFEDD8400DAFD90 /* MyAuthentication.swift */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		8411D8FD1FFEDD8400DAFD90 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8FE1FFEDD8400DAFD90 /* Tabs */,
+				8411D9041FFEDD8400DAFD90 /* CreateBagTableViewController.swift */,
+				8411D9051FFEDD8400DAFD90 /* LoginViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		8411D8FE1FFEDD8400DAFD90 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				8411D8FF1FFEDD8400DAFD90 /* HomeTabTableViewController.swift */,
+				8411D9001FFEDD8400DAFD90 /* SettingsTabTableViewController.swift */,
+				8411D9011FFEDD8400DAFD90 /* New Group */,
+				8411D9021FFEDD8400DAFD90 /* MainTabBarViewController.swift */,
+				8411D9031FFEDD8400DAFD90 /* GlobalTabViewController.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		8411D9011FFEDD8400DAFD90 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8411D9061FFEDD8400DAFD90 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8411D9071FFEDD8400DAFD90 /* MyCell.swift */,
+				8411D9081FFEDD8400DAFD90 /* PressableButton.swift */,
+				8411D9091FFEDD8400DAFD90 /* ScaleSegue.swift */,
+				8411D90A1FFEDD8400DAFD90 /* MyTextField.swift */,
+				8411D90B1FFEDD8400DAFD90 /* Toast.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		841723311FF809D900811221 = {
 			isa = PBXGroup;
 			children = (
 				8417233C1FF809D900811221 /* TimeToBagV1 */,
 				8417233B1FF809D900811221 /* Products */,
+				09BF0B0A79EDF827CE5F7ADD /* Pods */,
+				8C7B15C2E24F47D4356F346A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +211,27 @@
 		8417233C1FF809D900811221 /* TimeToBagV1 */ = {
 			isa = PBXGroup;
 			children = (
+				8411D8FD1FFEDD8400DAFD90 /* controllers */,
+				8411D8EE1FFEDD8400DAFD90 /* model */,
+				8411D9061FFEDD8400DAFD90 /* views */,
 				8417233D1FF809D900811221 /* AppDelegate.swift */,
-				8417233F1FF809D900811221 /* ViewController.swift */,
-				841723411FF809D900811221 /* Main.storyboard */,
-				841723441FF809D900811221 /* Assets.xcassets */,
+				84B7DD471FF80D58006F174F /* Main.storyboard */,
+				8417234F1FF80A3A00811221 /* GoogleService-Info.plist */,
 				841723461FF809D900811221 /* LaunchScreen.storyboard */,
 				841723491FF809D900811221 /* Info.plist */,
+				84B7DD5C1FF84FD6006F174F /* Assets.xcassets */,
+				844820C21FFAF07900597591 /* TimeToBagV1-Bridging-Header.h */,
 			);
 			path = TimeToBagV1;
+			sourceTree = "<group>";
+		};
+		8C7B15C2E24F47D4356F346A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				844820C01FFAF02300597591 /* libsqlite3.0.tbd */,
+				337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8417234C1FF809D900811221 /* Build configuration list for PBXNativeTarget "TimeToBagV1" */;
 			buildPhases = (
+				8E0563DB340F95EF3E602154 /* [CP] Check Pods Manifest.lock */,
 				841723361FF809D900811221 /* Sources */,
 				841723371FF809D900811221 /* Frameworks */,
 				841723381FF809D900811221 /* Resources */,
+				89220FCEC2CE21DDA795C50B /* [CP] Embed Pods Frameworks */,
+				D00C9236BFB1057BF49FF982 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +269,7 @@
 				TargetAttributes = {
 					841723391FF809D900811221 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,34 +298,108 @@
 			buildActionMask = 2147483647;
 			files = (
 				841723481FF809D900811221 /* LaunchScreen.storyboard in Resources */,
-				841723451FF809D900811221 /* Assets.xcassets in Resources */,
-				841723431FF809D900811221 /* Main.storyboard in Resources */,
+				841723501FF80A3A00811221 /* GoogleService-Info.plist in Resources */,
+				84B7DD5D1FF84FD6006F174F /* Assets.xcassets in Resources */,
+				84B7DD481FF80D58006F174F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89220FCEC2CE21DDA795C50B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0563DB340F95EF3E602154 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeToBagV1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00C9236BFB1057BF49FF982 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		841723361FF809D900811221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841723401FF809D900811221 /* ViewController.swift in Sources */,
+				8411D9121FFEDD8500DAFD90 /* Weather.swift in Sources */,
+				8411D90C1FFEDD8500DAFD90 /* FirebaseFileStore.swift in Sources */,
+				8411D9151FFEDD8500DAFD90 /* HomeTabTableViewController.swift in Sources */,
+				8411D91B1FFEDD8500DAFD90 /* MyCell.swift in Sources */,
+				8411D91D1FFEDD8500DAFD90 /* ScaleSegue.swift in Sources */,
+				8411D90E1FFEDD8500DAFD90 /* ModelFilesStore.swift in Sources */,
+				8411D9131FFEDD8500DAFD90 /* VacationType.swift in Sources */,
+				8411D9111FFEDD8500DAFD90 /* Bag.swift in Sources */,
+				8411D9161FFEDD8500DAFD90 /* SettingsTabTableViewController.swift in Sources */,
+				8411D9171FFEDD8500DAFD90 /* MainTabBarViewController.swift in Sources */,
+				8411D91C1FFEDD8500DAFD90 /* PressableButton.swift in Sources */,
+				8411D9141FFEDD8500DAFD90 /* MyAuthentication.swift in Sources */,
 				8417233E1FF809D900811221 /* AppDelegate.swift in Sources */,
+				8411D91F1FFEDD8500DAFD90 /* Toast.swift in Sources */,
+				8411D90F1FFEDD8500DAFD90 /* VacationTypeDataGenerator.swift in Sources */,
+				8411D9101FFEDD8500DAFD90 /* WeatherDataGenerator.swift in Sources */,
+				8411D91E1FFEDD8500DAFD90 /* MyTextField.swift in Sources */,
+				8411D91A1FFEDD8500DAFD90 /* LoginViewController.swift in Sources */,
+				8411D9191FFEDD8500DAFD90 /* CreateBagTableViewController.swift in Sources */,
+				8411D90D1FFEDD8500DAFD90 /* LocalFileStore.swift in Sources */,
+				8411D9181FFEDD8500DAFD90 /* GlobalTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		841723411FF809D900811221 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				841723421FF809D900811221 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		841723461FF809D900811221 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -272,13 +520,17 @@
 		};
 		8417234D1FF809D900811221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66F3B9C07B87FDDB1F0087DC /* Pods-TimeToBagV1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeToBagV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tal.TimeToBagV1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeToBagV1/TimeToBagV1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,13 +538,16 @@
 		};
 		8417234E1FF809D900811221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77AB88A75EA25E9D4C4E4DDD /* Pods-TimeToBagV1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeToBagV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tal.TimeToBagV1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeToBagV1/TimeToBagV1-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
