@@ -333,10 +333,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="yrF-S1-35S">
-                                                    <rect key="frame" x="239" y="13" width="120" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-3C-yg5" customClass="PressableButton" customModule="TimeToBagV1" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="85" width="205" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -357,7 +353,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="onSave:" destination="Tya-HL-GAc" eventType="touchUpInside" id="C6n-Oj-cyq"/>
+                                                        <action selector="onSave:" destination="Tya-HL-GAc" eventType="touchUpInside" id="975-pY-i4P"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6jm-w6-Is7" customClass="JiroTextField" customModule="TextFieldEffects">
@@ -376,6 +372,10 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="yrF-S1-35S">
+                                                    <rect key="frame" x="239" y="14" width="120" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.5175246147260274" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

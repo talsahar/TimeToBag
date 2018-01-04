@@ -4,7 +4,7 @@ import Foundation
 import Firebase
 
 class FirebaseFileStore {
-    static var storageRef = Storage.storage().reference(forURL:"gs://sssss-41596.appspot.com/")
+    static var storageRef = Storage.storage().reference(forURL:"gs://timetobag-e6a02.appspot.com/")
     
     static func saveImageToFirebase(image:UIImage, name:(String), callback:@escaping (String?)->Void){
         let filesRef = storageRef.child(name)

@@ -51,4 +51,38 @@ class MyAuthentication{
    static func isConnected() -> Bool {
         return (Auth.auth().currentUser != nil)
     }
+    
+    static func updateProfile(displayName:String?,photo:URL?,thenDo:@escaping ()->Void){
+        if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest(){
+            if !(displayName?.isEmpty)!{
+                changeRequest.displayName=displayName
+            }
+            if photo != nil{
+                changeRequest.photoURL=photo
+            }
+            changeRequest.commitChanges { (error) in
+                thenDo()
+            }
+        }
+    }
+    
+    static func updateProfileImage(photo:URL,thenDo:@escaping ()->Void){
+        if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest(){
+            changeRequest.photoURL=photo
+            changeRequest.commitChanges { (error) in
+                thenDo()
+            }
+        }
+    }
+    
+    static func updateNickname(displayName:String,thenDo:@escaping ()->Void){
+        if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest(){
+            changeRequest.displayName=displayName
+            changeRequest.commitChanges { (error) in
+                thenDo()
+            }
+        }
+        
+    }
+    
 }

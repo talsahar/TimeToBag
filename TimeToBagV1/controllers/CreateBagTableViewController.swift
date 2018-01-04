@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftSpinner
 class CreateBagTableViewController: UITableViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate ,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate
 {
     @IBOutlet weak var destinationField: UITextField!
@@ -79,9 +79,12 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        SwiftSpinner.show("Uploading image...")
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         userPickerImage.image = image
         dismiss(animated:true, completion: nil)
+        SwiftSpinner.hide()
+
     }
     
     

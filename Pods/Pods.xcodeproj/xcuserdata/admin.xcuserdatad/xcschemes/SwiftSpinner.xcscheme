@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '345E256C07FF58A8E004DBF0B7F01117'
-               BlueprintName = 'TextFieldEffects'
+               BlueprintIdentifier = '53F2458AC1F73A704790B6ECFA71638A'
+               BlueprintName = 'SwiftSpinner'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TextFieldEffects.framework'>
+               BuildableName = 'SwiftSpinner.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

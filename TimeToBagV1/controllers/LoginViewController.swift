@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import SwiftSpinner
 protocol LoginControllerDelegate{
     
     func onLoginSuccess(user:User)
@@ -35,7 +35,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate, LoginControlle
     }
     
     @IBAction func onLogoutButton(segue:UIStoryboardSegue){
+        SwiftSpinner.show("Signing out...")
         MyAuthentication.logout()
+        SwiftSpinner.hide()
     }
     
     @IBAction func signinAction(_ sender: Any) {
@@ -47,6 +49,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate, LoginControlle
         }
         
         else{
+            SwiftSpinner.show("Signing in...")
             MyAuthentication.signin(email: emailField.text!, password: passwordField.text!,onSuccess: {user in self.onLoginSuccess(user: user)}, onFail: {error in self.onLoginFailed(error: error)})
             
         }
@@ -64,6 +67,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate, LoginControlle
             }
             else
             {
+                SwiftSpinner.show("Signing up...")
                 MyAuthentication.signup(email: emailField.text!, password: passwordField.text!, nickname: nicknameField.text!, onSuccess: {user in self.onSignupSuccess(user: user)}, onFail: {error in self.onSignupFailed(error: error)})
         }
     }
@@ -72,18 +76,25 @@ class LoginViewController: UIViewController ,UITextFieldDelegate, LoginControlle
     }
     
     func onLoginSuccess(user: User) {
-        self.view.makeToast("you have been successfully signed in", duration: 3.0, position: .bottom)
-        loadMainController()
+        SwiftSpinner.hide({
+            self.loadMainController()
+        })
     }
     func onSignupSuccess(user: User) {
-        self.view.makeToast("you have been successfully signed up", duration: 3.0, position: .bottom)
-        loadMainController()
+        SwiftSpinner.hide({
+            self.loadMainController()
+        })
+       
     }
     func onLoginFailed(error: Error) {
-        self.view.makeToast(error.localizedDescription, duration: 3.0, position: .bottom)
+        SwiftSpinner.hide({
+            self.view.makeToast(error.localizedDescription, duration: 3.0, position: .bottom)
+        })
     }
     func onSignupFailed(error: Error) {
-        self.view.makeToast(error.localizedDescription, duration: 3.0, position: .bottom)
+        SwiftSpinner.hide({
+            self.view.makeToast(error.localizedDescription, duration: 3.0, position: .bottom)
+        })
     }
     
     
