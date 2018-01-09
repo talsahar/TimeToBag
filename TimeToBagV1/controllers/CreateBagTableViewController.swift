@@ -10,10 +10,7 @@ import UIKit
 import SwiftSpinner
 class CreateBagTableViewController: UITableViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate ,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate
 {
-    @IBOutlet weak var destinationField: UITextField!
-    
-   
-    
+  
 //    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
 //        let header = view as! UITableViewHeaderFooterView
 //        header.textLabel?.font = UIFont(name: "Futura", size: 11)!
@@ -21,12 +18,13 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
 //        header.backgroundColor=UIColor.blue
 //    }
 //    
+    @IBOutlet weak var destinationField: UITextField!
     @IBOutlet weak var userPickerImage: UIImageView!
     @IBOutlet weak var weatherPicker: UIPickerView!
     @IBOutlet weak var targetPicker: UIPickerView!
-    @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-
+    @IBOutlet weak var descriptionField: UITextView!
+    
     let weatherData = WeatherDataGenerator.generate()
     let targetData = VacationTypeDataGenerator.generate()
     
@@ -43,9 +41,23 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
     
     
     @IBAction func onDone(_ sender: Any) {
+        if verify()==true{
+            let id=UUID().uuidString
+            let userId=MyAuthentication.getCurrentUser().displayName
+            let title=destinationField.text
+            let description=descriptionField.text
+            let vacationDate=datePicker.date
+            let weather=pickerView(weatherPicker, titleForRow:weatherPicker.selectedRow(inComponent: 0), forComponent: 0)
+            let type=pickerView(targetPicker, titleForRow: targetPicker.selectedRow(inComponent: 0), forComponent: 0)
+            let imageUrl=ModelFileStore.saveImage(image: userPickerImage.image!, name: "images/\(id).jpg", callback: {imageUrl in
+                let bag=Bag(id: id, userId: userId!, title: title!, description: description!, vacationDate: vacationDate, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: nil)
+                Model.storeBag(bag: bag)
+                //save object on database
+                
+            })
+        }
 //        if destinationField.text != ""{
-//            let weather=pickerView(weatherPicker, titleForRow: weatherPicker.selectedRow(inComponent: 0), forComponent: 0)
-//            let type=pickerView(targetPicker, titleForRow: targetPicker.selectedRow(inComponent: 0), forComponent: 0)
+//
 //            let id=UUID().uuidString
 //            let imageUrl=ModelFileStore.saveImage(image: userPickerImage.image!, name: id, callback: { (imageUrl) in
 //                var bag=Bag(id:id,userId: MyAuthentication.getCurrentUser().providerID, vacationDate: self.datePicker.date, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: nil)
@@ -64,7 +76,9 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
 //            //return to main
 //        }
     }
-    
+    func verify()->Bool{
+        return true
+    }
     
     //image picker
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

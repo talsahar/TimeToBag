@@ -34,6 +34,13 @@
 		844820C11FFAF02300597591 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 844820C01FFAF02300597591 /* libsqlite3.0.tbd */; };
 		84B7DD481FF80D58006F174F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD471FF80D58006F174F /* Main.storyboard */; };
 		84B7DD5D1FF84FD6006F174F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD5C1FF84FD6006F174F /* Assets.xcassets */; };
+		84E0329120058A0100C8BFB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329020058A0100C8BFB4 /* Item.swift */; };
+		84E0329720058A1D00C8BFB4 /* SqliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329320058A1D00C8BFB4 /* SqliteModel.swift */; };
+		84E0329820058A1D00C8BFB4 /* LocalDbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */; };
+		84E0329920058A1E00C8BFB4 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329520058A1D00C8BFB4 /* ModelSql.swift */; };
+		84E0329A20058A1E00C8BFB4 /* FirebaseBagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */; };
+		84E0329D20058A2E00C8BFB4 /* Date+firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329C20058A2E00C8BFB4 /* Date+firebase.swift */; };
+		84E0329F20058A3600C8BFB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329E20058A3600C8BFB4 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,13 @@
 		844820C21FFAF07900597591 /* TimeToBagV1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeToBagV1-Bridging-Header.h"; sourceTree = "<group>"; };
 		84B7DD471FF80D58006F174F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84B7DD5C1FF84FD6006F174F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84E0329020058A0100C8BFB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		84E0329320058A1D00C8BFB4 /* SqliteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteModel.swift; sourceTree = "<group>"; };
+		84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDbModel.swift; sourceTree = "<group>"; };
+		84E0329520058A1D00C8BFB4 /* ModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
+		84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseBagModel.swift; sourceTree = "<group>"; };
+		84E0329C20058A2E00C8BFB4 /* Date+firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+firebase.swift"; sourceTree = "<group>"; };
+		84E0329E20058A3600C8BFB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,9 @@
 		8411D8EE1FFEDD8400DAFD90 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				84E0329E20058A3600C8BFB4 /* Model.swift */,
+				84E0329B20058A2E00C8BFB4 /* utils */,
+				84E0329220058A1D00C8BFB4 /* db */,
 				8411D8EF1FFEDD8400DAFD90 /* fileManagment */,
 				8411D8F31FFEDD8400DAFD90 /* dataGenerators */,
 				8411D8F61FFEDD8400DAFD90 /* data */,
@@ -127,18 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				8411D8F71FFEDD8400DAFD90 /* Bag.swift */,
-				8411D8F81FFEDD8400DAFD90 /* New Group */,
+				84E0329020058A0100C8BFB4 /* Item.swift */,
 				8411D8F91FFEDD8400DAFD90 /* Weather.swift */,
 				8411D8FA1FFEDD8400DAFD90 /* VacationType.swift */,
 			);
 			path = data;
-			sourceTree = "<group>";
-		};
-		8411D8F81FFEDD8400DAFD90 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		8411D8FB1FFEDD8400DAFD90 /* authentication */ = {
@@ -223,6 +233,25 @@
 				844820C21FFAF07900597591 /* TimeToBagV1-Bridging-Header.h */,
 			);
 			path = TimeToBagV1;
+			sourceTree = "<group>";
+		};
+		84E0329220058A1D00C8BFB4 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				84E0329320058A1D00C8BFB4 /* SqliteModel.swift */,
+				84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */,
+				84E0329520058A1D00C8BFB4 /* ModelSql.swift */,
+				84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		84E0329B20058A2E00C8BFB4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				84E0329C20058A2E00C8BFB4 /* Date+firebase.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		8C7B15C2E24F47D4356F346A /* Frameworks */ = {
@@ -375,12 +404,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0329D20058A2E00C8BFB4 /* Date+firebase.swift in Sources */,
 				8411D9121FFEDD8500DAFD90 /* Weather.swift in Sources */,
 				8411D90C1FFEDD8500DAFD90 /* FirebaseFileStore.swift in Sources */,
+				84E0329920058A1E00C8BFB4 /* ModelSql.swift in Sources */,
 				8411D9151FFEDD8500DAFD90 /* HomeTabTableViewController.swift in Sources */,
 				8411D91B1FFEDD8500DAFD90 /* MyCell.swift in Sources */,
+				84E0329A20058A1E00C8BFB4 /* FirebaseBagModel.swift in Sources */,
+				84E0329F20058A3600C8BFB4 /* Model.swift in Sources */,
+				84E0329720058A1D00C8BFB4 /* SqliteModel.swift in Sources */,
 				8411D91D1FFEDD8500DAFD90 /* ScaleSegue.swift in Sources */,
 				8411D90E1FFEDD8500DAFD90 /* ModelFilesStore.swift in Sources */,
+				84E0329120058A0100C8BFB4 /* Item.swift in Sources */,
 				8411D9131FFEDD8500DAFD90 /* VacationType.swift in Sources */,
 				8411D9111FFEDD8500DAFD90 /* Bag.swift in Sources */,
 				8411D9161FFEDD8500DAFD90 /* SettingsTabTableViewController.swift in Sources */,
@@ -396,6 +431,7 @@
 				8411D9191FFEDD8500DAFD90 /* CreateBagTableViewController.swift in Sources */,
 				8411D90D1FFEDD8500DAFD90 /* LocalFileStore.swift in Sources */,
 				8411D9181FFEDD8500DAFD90 /* GlobalTabViewController.swift in Sources */,
+				84E0329820058A1D00C8BFB4 /* LocalDbModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

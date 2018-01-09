@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gq2-xy-VCq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gq2-xy-VCq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -320,11 +319,11 @@
                         <sections>
                             <tableViewSection id="jTM-Sd-s6R">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="196" id="Rfo-LA-wmi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="202" id="Rfo-LA-wmi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rfo-LA-wmi" id="ffN-Iy-AH8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="195.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-3C-yg5" customClass="PressableButton" customModule="TimeToBagV1" customModuleProvider="target">
@@ -370,10 +369,10 @@
                                                     <rect key="frame" x="239" y="14" width="120" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-K7-cR5" customClass="PressableButton" customModule="TimeToBagV1" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="137" width="343" height="48"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-wo-fXD" customClass="PressableButton" customModule="TimeToBagV1" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="141" width="343" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.97874635457992554" green="0.26626747846603394" blue="0.037084300071001053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.99701148269999995" green="0.29352461041070604" blue="0.14700712104488889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                                     <state key="normal" title="Sign out">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -390,8 +389,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="onSave:" destination="Tya-HL-GAc" eventType="touchUpInside" id="Dav-QP-0fZ"/>
-                                                        <segue destination="uSL-np-bYD" kind="unwind" unwindAction="onLogoutButtonWithSegue:" id="98y-0B-rZh"/>
+                                                        <action selector="onSave:" destination="Tya-HL-GAc" eventType="touchUpInside" id="M9k-5r-15x"/>
+                                                        <segue destination="O7l-fX-enk" kind="unwind" unwindAction="onLogoutButtonWithSegue:" id="M0t-Ig-Du5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -413,7 +412,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLR-mg-bbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="uSL-np-bYD" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="O7l-fX-enk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3749.5999999999999" y="582.45877061469275"/>
         </scene>
@@ -421,7 +420,7 @@
         <scene sceneID="QBy-Ox-wTM">
             <objects>
                 <tableViewController id="Mv8-wU-ufw" customClass="CreateBagTableViewController" customModule="TimeToBagV1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="p9k-A7-Ss7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="p9k-A7-Ss7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -528,6 +527,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Vacation description" id="TRO-ci-y5q">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="PbI-ZW-3Qg">
+                                        <rect key="frame" x="0.0" y="584.5" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PbI-ZW-3Qg" id="Mv9-Ev-L1U">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jX1-dV-SqH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <variation key="displayGamut=sRGB">
                             <nil key="separatorColor"/>
@@ -551,8 +571,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="iqy-0M-rfm" id="Z0u-wO-1nr"/>
+                        <outlet property="descriptionField" destination="jX1-dV-SqH" id="ktL-0S-zYq"/>
                         <outlet property="destinationField" destination="8M4-l1-jCo" id="snA-z9-ZJJ"/>
-                        <outlet property="destinationTextField" destination="8M4-l1-jCo" id="Url-ck-xNm"/>
                         <outlet property="targetPicker" destination="kbI-kV-sdg" id="5j3-Pb-mXo"/>
                         <outlet property="userPickerImage" destination="XEn-En-RHc" id="2hl-Na-OHl"/>
                         <outlet property="weatherPicker" destination="du1-hO-f0n" id="Ng2-NE-9TR"/>

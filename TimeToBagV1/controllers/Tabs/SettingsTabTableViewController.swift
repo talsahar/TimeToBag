@@ -26,7 +26,7 @@ class SettingsTabTableViewController: UITableViewController ,UITextFieldDelegate
         if user != nil{
             nicknameField.text=user.displayName
             if user.photoURL != nil{
-                ModelFileStore.getImage(urlStr: "profile/\(MyAuthentication.getCurrentUser().uid).jpg", callback: {
+                ModelFileStore.getImage(urlStr: "gs://timetobag-e6a02.appspot.com/profile/\(MyAuthentication.getCurrentUser().uid).jpg", callback: {
                     image in
                     self.userImage.image=image
                     SwiftSpinner.hide()
