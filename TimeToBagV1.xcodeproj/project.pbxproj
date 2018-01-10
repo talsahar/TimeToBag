@@ -35,7 +35,6 @@
 		84B7DD481FF80D58006F174F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD471FF80D58006F174F /* Main.storyboard */; };
 		84B7DD5D1FF84FD6006F174F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B7DD5C1FF84FD6006F174F /* Assets.xcassets */; };
 		84E0329120058A0100C8BFB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329020058A0100C8BFB4 /* Item.swift */; };
-		84E0329720058A1D00C8BFB4 /* SqliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329320058A1D00C8BFB4 /* SqliteModel.swift */; };
 		84E0329820058A1D00C8BFB4 /* LocalDbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */; };
 		84E0329920058A1E00C8BFB4 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329520058A1D00C8BFB4 /* ModelSql.swift */; };
 		84E0329A20058A1E00C8BFB4 /* FirebaseBagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */; };
@@ -77,7 +76,6 @@
 		84B7DD471FF80D58006F174F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84B7DD5C1FF84FD6006F174F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E0329020058A0100C8BFB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		84E0329320058A1D00C8BFB4 /* SqliteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteModel.swift; sourceTree = "<group>"; };
 		84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDbModel.swift; sourceTree = "<group>"; };
 		84E0329520058A1D00C8BFB4 /* ModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
 		84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseBagModel.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 		84E0329220058A1D00C8BFB4 /* db */ = {
 			isa = PBXGroup;
 			children = (
-				84E0329320058A1D00C8BFB4 /* SqliteModel.swift */,
 				84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */,
 				84E0329520058A1D00C8BFB4 /* ModelSql.swift */,
 				84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */,
@@ -412,7 +409,6 @@
 				8411D91B1FFEDD8500DAFD90 /* MyCell.swift in Sources */,
 				84E0329A20058A1E00C8BFB4 /* FirebaseBagModel.swift in Sources */,
 				84E0329F20058A3600C8BFB4 /* Model.swift in Sources */,
-				84E0329720058A1D00C8BFB4 /* SqliteModel.swift in Sources */,
 				8411D91D1FFEDD8500DAFD90 /* ScaleSegue.swift in Sources */,
 				8411D90E1FFEDD8500DAFD90 /* ModelFilesStore.swift in Sources */,
 				84E0329120058A0100C8BFB4 /* Item.swift in Sources */,

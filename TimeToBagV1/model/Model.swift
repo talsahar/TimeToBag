@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Model{
     static func storeBag(bag:Bag){
         FirebaseBagModel.storeBag(bag: bag, completionBlock: {error in
@@ -17,5 +18,8 @@ class Model{
             LocalDbModel.addBagToLocalDb(database: sqlite?.database, bag: bag)
             })
     }
+    
+
+    
 }
 
