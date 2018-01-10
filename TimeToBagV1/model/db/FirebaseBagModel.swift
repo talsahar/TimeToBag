@@ -9,20 +9,26 @@
 import FirebaseDatabase
 import Foundation
 class FirebaseBagModel{
-    //fix the completionBlock
+    //stores a bag, counting down while storing items, when 0 trigger the callback
     static func storeBag(bag:Bag, completionBlock:@escaping (Error?)->Void){
-        var bagJson=bag.buildBagJson()
-        var ref = Database.database().reference().child("bags").child(bag.id!)
+        let bagJson=bag.buildBagJson()
+        let ref = Database.database().reference().child("bags").child(bag.id!)
         ref.setValue(bagJson){(error, dbref) in
-            var ref = ref.child("items")
+            var counter=bag.items.count
+           let itemsRef = dbref.child("items")
                   for it in bag.items{
-                    var itemRef=ref.child(it.itemId!)
-                      itemRef.setValue(it.buildJson())
-                   }
-            completionBlock(error)
-        }
+                    let currItemRef=itemsRef.child(it.itemId!)
+                    currItemRef.setValue(it.buildJson()){
+                        (error, dbref) in
+                        counter += -1
+                        if counter == 0{
+                         completionBlock(error)
+                        }
+                    }
+                }
     }
-        }
+}
 
 
 
+}
