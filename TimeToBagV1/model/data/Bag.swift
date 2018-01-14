@@ -73,10 +73,7 @@ class Bag{
         }
         json["weather"]=weather?.rawValue
         json["vacationType"]=vacationType?.rawValue
-        
-        let lu=ServerValue.timestamp()
-        lastUpdate=Date.fromFirebase(lu)
-        json["lastUpdate"] = lu
+        json["lastUpdate"] = ServerValue.timestamp()
         return json
     }
     

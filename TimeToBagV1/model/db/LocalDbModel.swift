@@ -81,6 +81,10 @@ class LocalDbModel{
             _imageUrl = bag?.imageUrl!.cString(using: .utf8)
             }
         
+        if bag?.lastUpdate == nil{
+        bag?.lastUpdate=Date()
+        }
+        
         sqlite3_bind_text(sqlite3_stmt, 1, bag?.id?.cString(using: .utf8),-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 2, bag?.userId?.cString(using: .utf8),-1,nil);
         sqlite3_bind_double(sqlite3_stmt, 3, (bag?.vacationDate?.toFirebase())!);
@@ -106,15 +110,13 @@ class LocalDbModel{
                     + "(" + ITEM_ID + ","
                     + ITEM_BAG_ID + ","
                     + ITEM_TITLE + ","
-                    + ITEM_ISTOKEN + ","
-                    + LAST_UPDATE + ") VALUES (?,?,?,?,?);",-1, &sqlite3_stmt,nil)
+                    + ITEM_ISTOKEN + ") VALUES (?,?,?,?);",-1, &sqlite3_stmt,nil)
                 
                 if result == SQLITE_OK{
                     sqlite3_bind_text(sqlite3_stmt, 1, item.itemId,-1,nil);
                     sqlite3_bind_text(sqlite3_stmt, 2, item.bagId,-1,nil);
                     sqlite3_bind_text(sqlite3_stmt, 3, item.itemTitle,-1,nil);
                     sqlite3_bind_text(sqlite3_stmt, 4, item.isToken?.description,-1,nil);
-                    sqlite3_bind_double(sqlite3_stmt, 5, (item.lastUpdate?.toFirebase())!);
 
                     if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
                         print("item added")
@@ -122,7 +124,59 @@ class LocalDbModel{
             }
           
         }
-        
+    }
+    
+    static func loadAllBagsFromLocal(database:OpaquePointer?)->[Bag]{
+        var bags = [Bag]()
+        var sqlite3_stmt: OpaquePointer? = nil
+        if (sqlite3_prepare_v2(database,"SELECT * from BAGS;",-1,&sqlite3_stmt,nil) == SQLITE_OK){
+            while(sqlite3_step(sqlite3_stmt) == SQLITE_ROW){
+                
+                let bagId =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
+                let userId =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
+                let date = Date.fromFirebase(Double(sqlite3_column_double(sqlite3_stmt,2)))
+                let title =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
+                let description =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,4))
+                var imageUrl =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,5))
+                if (imageUrl != nil && imageUrl == ""){
+                    imageUrl = nil
+                }
+                let weather=String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,6))
+                let type=String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,7))
+                let update =  Date.fromFirebase(Double(sqlite3_column_double(sqlite3_stmt,8)))
+                print("read from filter st: \(bagId) \(userId) \(date) \(title) \(description) \(imageUrl) \(weather) \(type) \(update)")
+                if (imageUrl != nil && imageUrl == ""){
+                    imageUrl = nil
+                }
+                let bag = Bag(id: bagId!, userId: userId!, title: title!, description: description!, vacationDate: date, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: loadItemsByBagIdFromLocal(database: database, bagId: bagId!))
+                bag.lastUpdate = update
+                bags.append(bag)
+            }
+        }
+        sqlite3_finalize(sqlite3_stmt)
+        return bags
+    }
+    
+    static func loadItemsByBagIdFromLocal(database:OpaquePointer?,bagId:String)->[Item]{
+        var items = [Item]()
+        var sqlite3_stmt: OpaquePointer? = nil
+        if (sqlite3_prepare_v2(database,"SELECT * from ITEMS where BAG_ID = \(bagId);",-1,&sqlite3_stmt,nil) == SQLITE_OK){
+            while(sqlite3_step(sqlite3_stmt) == SQLITE_ROW){
+                
+                let itemId =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
+                let bagId =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
+                var itemTitle =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
+                let isToken =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
+                print("read item local: \(itemId) \(bagId) \(itemTitle) \(isToken)")
+               let isTokenBool = NSString(string:isToken!).boolValue
+                let item = Item(itemId:itemId!,bagId:bagId!,itemTitle:itemTitle!,isToken:isTokenBool)
+                items.append(item)
+            }
+        }
+        sqlite3_finalize(sqlite3_stmt)
+        return items
+    }
+    
 //        for item in items{
 //            if (sqlite3_prepare_v2(database,"INSERT OR REPLACE INTO " + ITEM_TABLE
 //                + "(" + ITEM_BAG_ID + ","
@@ -149,7 +203,7 @@ class LocalDbModel{
 //        }
 //
         
-    }
+    
     
 //    static func getAllBagsFromLocalDb(database:OpaquePointer?)->[Student]{
 //        var bags = [Bag]()

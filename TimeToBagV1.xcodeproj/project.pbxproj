@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3AAA09200BA97500FA753F /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAA08200BA97500FA753F /* LastUpdateTable.swift */; };
 		68C327A30ED1E63C3D36672F /* Pods_TimeToBagV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */; };
 		8411D90C1FFEDD8500DAFD90 /* FirebaseFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F01FFEDD8400DAFD90 /* FirebaseFileStore.swift */; };
 		8411D90D1FFEDD8500DAFD90 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F11FFEDD8400DAFD90 /* LocalFileStore.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3AAA08200BA97500FA753F /* LastUpdateTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateTable.swift; sourceTree = "<group>"; };
 		337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeToBagV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3B9C07B87FDDB1F0087DC /* Pods-TimeToBagV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToBagV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1.debug.xcconfig"; sourceTree = "<group>"; };
 		77AB88A75EA25E9D4C4E4DDD /* Pods-TimeToBagV1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToBagV1.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				84E0329420058A1D00C8BFB4 /* LocalDbModel.swift */,
 				84E0329520058A1D00C8BFB4 /* ModelSql.swift */,
 				84E0329620058A1D00C8BFB4 /* FirebaseBagModel.swift */,
+				0F3AAA08200BA97500FA753F /* LastUpdateTable.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				8411D91D1FFEDD8500DAFD90 /* ScaleSegue.swift in Sources */,
 				8411D90E1FFEDD8500DAFD90 /* ModelFilesStore.swift in Sources */,
 				84E0329120058A0100C8BFB4 /* Item.swift in Sources */,
+				0F3AAA09200BA97500FA753F /* LastUpdateTable.swift in Sources */,
 				8411D9131FFEDD8500DAFD90 /* VacationType.swift in Sources */,
 				8411D9111FFEDD8500DAFD90 /* Bag.swift in Sources */,
 				8411D9161FFEDD8500DAFD90 /* SettingsTabTableViewController.swift in Sources */,

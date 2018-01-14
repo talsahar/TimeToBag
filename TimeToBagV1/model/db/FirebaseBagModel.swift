@@ -11,14 +11,25 @@ import Foundation
 class FirebaseBagModel{
     
     static func loadAllBagsAndObserve(_ lastUpdateDate:Date?, callback:@escaping ([Bag])->Void){
-        print("FB: loadAllBagsAndObserve")
         let handler = {(snapshot:DataSnapshot) in
             var bags = [Bag]()
-            for child in snapshot.children.allObjects{
-                if let childData = child as? DataSnapshot{
-                    if let json = childData.value as? Dictionary<String,Any>{
-                        let bag = Bag(json: json)
-                        bags.append(bag)
+            for bagChild in snapshot.children.allObjects{
+                
+                if let bagChildData = bagChild as? DataSnapshot{
+                    if let bagJson = bagChildData.value as? Dictionary<String,Any>{
+                        let bag = Bag(json: bagJson)
+                        
+                        Database.database().reference().child("items").child(bag.id!).observe(.value, with: {(itemsSnapshot:DataSnapshot) in
+                            for itemChild in itemsSnapshot.children.allObjects{
+                                if let itemData = itemChild as? DataSnapshot{
+                                    if let itemJson = itemData.value as? Dictionary<String,Any>{
+                                        let item=Item(json:itemJson)
+                                        bag.append(item: item)
+                                    }
+                                }
+                            }
+                            bags.append(bag)
+                        })
                     }
                 }
             }
@@ -27,7 +38,6 @@ class FirebaseBagModel{
         
         let ref = Database.database().reference().child("bags")
         if (lastUpdateDate != nil){
-            print("q starting at:\(lastUpdateDate!) \(lastUpdateDate!.toFirebase())")
             let fbQuery = ref.queryOrdered(byChild:"lastUpdate").queryStarting(atValue:lastUpdateDate!.toFirebase())
             fbQuery.observe(DataEventType.value, with: handler)
         }else{
@@ -38,12 +48,12 @@ class FirebaseBagModel{
     
     //stores a bag, counting down while storing items, when 0 trigger the callback
     static func storeBag(bag:Bag, completionBlock:@escaping (Error?)->Void){
-        let bagJson=bag.buildBagJson()
+        var bagJson=bag.buildBagJson()
         let ref = Database.database().reference().child("bags").child(bag.id!)
         ref.setValue(bagJson){(error, dbref) in
 //            var counter=bag.items.count
             let dispatchTask = DispatchGroup()
-            let itemsRef = Database.database().reference().child("items")
+            let itemsRef = Database.database().reference().child("items").child(bag.id!)
             for it in bag.items{
                 dispatchTask.enter()
                 let currItemRef=itemsRef.child(it.itemId!)
@@ -61,4 +71,10 @@ class FirebaseBagModel{
             })
         }
     }
+    
+    static func clearObservers(){
+        let ref = Database.database().reference().child("bags")
+        ref.removeAllObservers()
+    }
+    
 }

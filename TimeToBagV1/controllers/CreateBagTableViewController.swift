@@ -41,6 +41,10 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
     
     
     @IBAction func onDone(_ sender: Any) {
+        
+        //delete it
+      //  Model.getAllBagsAndObserve()
+        
         if verify()==true{
             let id=UUID().uuidString
             let userId=MyAuthentication.getCurrentUser().displayName

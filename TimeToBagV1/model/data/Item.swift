@@ -12,15 +12,21 @@ class Item{
     var bagId:String?
     var itemTitle:String?
     var isToken:Bool?
-    var lastUpdate:Date?
     
-    init(itemId:String,bagId:String,itemTitle:String,isToken:Bool,lastUpdate:Date) {
+    init(itemId:String,bagId:String,itemTitle:String,isToken:Bool) {
         self.itemId=itemId
         self.bagId=bagId
         self.itemTitle=itemTitle
         self.isToken=isToken
-        self.lastUpdate=lastUpdate
     }
+    init(json:Dictionary<String,Any>){
+        itemId = json["itemId"] as! String
+        bagId = json["bagId"] as! String
+        itemTitle=json["itemTitle"] as! String
+        isToken=json["isToken"] as! Bool
+       
+    }
+    
     
     func buildJson()->(Dictionary<String,Any>){
         var json = Dictionary<String,Any>()
@@ -28,13 +34,8 @@ class Item{
         json["bagId"] = bagId
         json["itemTitle"] = itemTitle
         json["isToken"] = isToken
-        json["lastUpdate"] = self.lastUpdate?.toFirebase()
         return json
     }
    
-    
-    func hasUpdate(){
-        
-    }
     
 }
