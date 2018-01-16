@@ -28,7 +28,15 @@ class LocalDbModel{
     static let ITEM_ISTOKEN = "TOEKN"
 
     
-    
+    static func dropTable(database:OpaquePointer?)->Bool{
+        var sqlite3_stmt: OpaquePointer? = nil
+        if (sqlite3_prepare_v2(database,"DROP TABLE " + BAG_TABLE + ";",-1,&sqlite3_stmt,nil) == SQLITE_OK){
+            return true
+        }
+        else{
+            return false
+        }
+    }
     
     static func createTables(database:OpaquePointer?)->Bool{
         var errormsg: UnsafeMutablePointer<Int8>? = nil
@@ -148,9 +156,9 @@ class LocalDbModel{
                 if (imageUrl != nil && imageUrl == ""){
                     imageUrl = nil
                 }
-                let bag = Bag(id: bagId!, userId: userId!, title: title!, description: description!, vacationDate: date, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: loadItemsByBagIdFromLocal(database: database, bagId: bagId!))
-                bag.lastUpdate = update
-                bags.append(bag)
+//                let bag = Bag(id: bagId!, userId: userId!, title: title!, description: description!, vacationDate: date, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: loadItemsByBagIdFromLocal(database: database, bagId: bagId!))
+//                bag.lastUpdate = update
+//                bags.append(bag)
             }
         }
         sqlite3_finalize(sqlite3_stmt)

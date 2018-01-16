@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0ADEF4200E433C00B4C539 /* MyNotificationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0ADEF3200E433C00B4C539 /* MyNotificationBase.swift */; };
+		0F0ADEF6200E65FF00B4C539 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0ADEF5200E65FF00B4C539 /* ItemCell.swift */; };
 		0F3AAA09200BA97500FA753F /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AAA08200BA97500FA753F /* LastUpdateTable.swift */; };
 		68C327A30ED1E63C3D36672F /* Pods_TimeToBagV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */; };
 		8411D90C1FFEDD8500DAFD90 /* FirebaseFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411D8F01FFEDD8400DAFD90 /* FirebaseFileStore.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0ADEF3200E433C00B4C539 /* MyNotificationBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationBase.swift; sourceTree = "<group>"; };
+		0F0ADEF5200E65FF00B4C539 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0F3AAA08200BA97500FA753F /* LastUpdateTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateTable.swift; sourceTree = "<group>"; };
 		337BD1CE655B015426A1A96B /* Pods_TimeToBagV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeToBagV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3B9C07B87FDDB1F0087DC /* Pods-TimeToBagV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToBagV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeToBagV1/Pods-TimeToBagV1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				84E0329E20058A3600C8BFB4 /* Model.swift */,
+				0F0ADEF3200E433C00B4C539 /* MyNotificationBase.swift */,
 				84E0329B20058A2E00C8BFB4 /* utils */,
 				84E0329220058A1D00C8BFB4 /* db */,
 				8411D8EF1FFEDD8400DAFD90 /* fileManagment */,
@@ -174,18 +179,10 @@
 			children = (
 				8411D8FF1FFEDD8400DAFD90 /* HomeTabTableViewController.swift */,
 				8411D9001FFEDD8400DAFD90 /* SettingsTabTableViewController.swift */,
-				8411D9011FFEDD8400DAFD90 /* New Group */,
 				8411D9021FFEDD8400DAFD90 /* MainTabBarViewController.swift */,
 				8411D9031FFEDD8400DAFD90 /* GlobalTabViewController.swift */,
 			);
 			path = Tabs;
-			sourceTree = "<group>";
-		};
-		8411D9011FFEDD8400DAFD90 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		8411D9061FFEDD8400DAFD90 /* views */ = {
@@ -196,6 +193,7 @@
 				8411D9091FFEDD8400DAFD90 /* ScaleSegue.swift */,
 				8411D90A1FFEDD8400DAFD90 /* MyTextField.swift */,
 				8411D90B1FFEDD8400DAFD90 /* Toast.swift */,
+				0F0ADEF5200E65FF00B4C539 /* ItemCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -418,7 +416,9 @@
 				0F3AAA09200BA97500FA753F /* LastUpdateTable.swift in Sources */,
 				8411D9131FFEDD8500DAFD90 /* VacationType.swift in Sources */,
 				8411D9111FFEDD8500DAFD90 /* Bag.swift in Sources */,
+				0F0ADEF6200E65FF00B4C539 /* ItemCell.swift in Sources */,
 				8411D9161FFEDD8500DAFD90 /* SettingsTabTableViewController.swift in Sources */,
+				0F0ADEF4200E433C00B4C539 /* MyNotificationBase.swift in Sources */,
 				8411D9171FFEDD8500DAFD90 /* MainTabBarViewController.swift in Sources */,
 				8411D91C1FFEDD8500DAFD90 /* PressableButton.swift in Sources */,
 				8411D9141FFEDD8500DAFD90 /* MyAuthentication.swift in Sources */,

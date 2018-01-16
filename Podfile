@@ -12,4 +12,6 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod "SwiftSpinner"
+pod 'M13CheckBox'
 end
+

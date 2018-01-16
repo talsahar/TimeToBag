@@ -33,9 +33,18 @@ class ModelSql{
             }
         }
         
+        if LocalDbModel.dropTable(database: database) == false{
+            return nil
+        }
+        
         if LocalDbModel.createTables(database: database) == false{
             return nil
         }
+        
+        if LastUpdateTable.createTable(database: database) == false{
+            return nil
+        }
+        
 //        if LastUpdateTable.createTable(database: database) == false{
 //            return nil
 //        }

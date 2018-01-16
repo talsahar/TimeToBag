@@ -11,15 +11,22 @@ import UIKit
 class HomeTabTableViewController: UITableViewController {
 
     let animals=["Panda","Lion","Elefant"]
-    
+    var bagsData=[Bag]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
 
+        let imageView = UIImageView(image: UIImage(named: "myBagBackground2"))
+        imageView.contentMode = .scaleAspectFill
+        self.tableView.backgroundView = imageView
         
-        initBackground()
-       
+        ModelNotification.bagList.observe(callback: {bags in
+            self.bagsData = bags!
+            self.tableView.reloadData()
+
+            })
+        Model.getAllBagsAndObserve()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,13 +34,7 @@ class HomeTabTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    func initBackground(){
-        let imageView = UIImageView(image: UIImage(named: "myBagBackground2"))
-        imageView.contentMode = .scaleAspectFill
-       
-        self.tableView.backgroundView = imageView
-    }
-
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -42,15 +43,22 @@ class HomeTabTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-return animals.count
+return bagsData.count
     }
 
     
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyCell
-        cell.cellBackground.image = UIImage(named: "paris")
-        cell.cellTitle.text=animals[indexPath.row]
+        let bag=bagsData[indexPath.row]
+        ModelFileStore.getImage(urlStr: bag.imageUrl!, callback: {image in
+            cell.cellBackground.image = image
+
+        })
+        cell.topLeftLabel.text=bag.title
+        cell.topRightLabel.text=bag.vacationDate?.onlyDate()
+        cell.bottomLeftLabel.text=bag.vacationType?.rawValue
+        cell.bottomRightLabel.text=bag.weather?.rawValue
         cell.clipsToBounds = true
                 // Configure the cell...
         return cell

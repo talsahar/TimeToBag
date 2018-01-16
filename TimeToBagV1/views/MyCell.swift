@@ -11,8 +11,10 @@ import UIKit
 class MyCell: UITableViewCell {
 
     @IBOutlet weak var cellBackground: UIImageView!
-    @IBOutlet weak var cellTitle: UILabel!
-    @IBOutlet weak var cellText: UILabel!
+    @IBOutlet weak var topLeftLabel: UILabel!
+    @IBOutlet weak var bottomLeftLabel: UILabel!
+    @IBOutlet weak var topRightLabel: UILabel!
+    @IBOutlet weak var bottomRightLabel: UILabel!
     
     
     override func awakeFromNib() {

@@ -19,22 +19,21 @@ class FirebaseBagModel{
                     if let bagJson = bagChildData.value as? Dictionary<String,Any>{
                         let bag = Bag(json: bagJson)
                         
-                        Database.database().reference().child("items").child(bag.id!).observe(.value, with: {(itemsSnapshot:DataSnapshot) in
-                            for itemChild in itemsSnapshot.children.allObjects{
-                                if let itemData = itemChild as? DataSnapshot{
-                                    if let itemJson = itemData.value as? Dictionary<String,Any>{
-                                        let item=Item(json:itemJson)
-                                        bag.append(item: item)
-                                    }
-                                }
-                            }
+//                        Database.database().reference().child("items").child(bag.id!).observe(.value, with: {(itemsSnapshot:DataSnapshot) in
+//                            for itemChild in itemsSnapshot.children.allObjects{
+//                                if let itemData = itemChild as? DataSnapshot{
+//                                    if let itemJson = itemData.value as? Dictionary<String,Any>{
+//                                        let item=Item(json:itemJson)
+//                                        bag.append(item: item)
+//                                    }
+//                                }
+//                            }
                             bags.append(bag)
-                        })
-                    }
                 }
             }
             callback(bags)
         }
+    }
         
         let ref = Database.database().reference().child("bags")
         if (lastUpdateDate != nil){

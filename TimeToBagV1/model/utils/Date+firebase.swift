@@ -33,6 +33,17 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    func onlyDate()->String{
+      
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        return dateFormatter.string(from: self)
+        
+    }
+    
+    
 }
 
 
