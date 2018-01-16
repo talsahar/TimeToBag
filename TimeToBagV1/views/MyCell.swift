@@ -34,8 +34,11 @@ class MyCell: UITableViewCell {
         self.transform=CGAffineTransform(scaleX: 1.1, y: 1.1)
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 6, options: .allowUserInteraction, animations: {
             self.transform=CGAffineTransform.identity
+        }, completion: {bool in
             self.delegate?.onCellClicked(index: self.index!)
-        }, completion: nil)
+
+        })
+
         super.touchesBegan(touches, with: event)
     }
 	

@@ -9,12 +9,7 @@
 import UIKit
 
 class HomeTabTableViewController: UITableViewController, MyCellDelegate{
-    func onCellClicked(index: Int) {
-        selectedIndex=index
-        performSegue(withIdentifier: "myItemTableSegue", sender: self)
-    }
     
-
     var bagsData=[Bag]()
     var selectedIndex:Int?
     override func viewDidLoad() {
@@ -42,6 +37,10 @@ class HomeTabTableViewController: UITableViewController, MyCellDelegate{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
              }
   
+    func onCellClicked(index: Int) {
+        selectedIndex=index
+        performSegue(withIdentifier: "myItemTableSegue", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "myItemTableSegue") {
@@ -50,7 +49,6 @@ class HomeTabTableViewController: UITableViewController, MyCellDelegate{
                 myItemVC.currBag = bagsData[selectedIndex!]
                 
             }
-            
         }
     }
     
@@ -66,6 +64,7 @@ return bagsData.count
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyCell
         let bag=bagsData[indexPath.row]
         cell.delegate=self
+        cell.index=indexPath.row
         ModelFileStore.getImage(urlStr: bag.imageUrl!, callback: {image in
             cell.cellBackground.image = image
 
