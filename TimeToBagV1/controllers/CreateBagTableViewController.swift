@@ -56,6 +56,7 @@ class CreateBagTableViewController: UITableViewController ,UIImagePickerControll
             let imageUrl=ModelFileStore.saveImage(image: userPickerImage.image!, name: "images/\(id).jpg", callback: {imageUrl in
                 let bag=Bag(id: id, userId: userId!, title: title!, description: description!, vacationDate: vacationDate, imageUrl: imageUrl!, weather: Weather(rawValue: weather!)!, vacationType: VacationType(rawValue: type!)!, items: nil)
                 Model.storeBag(bag: bag)
+                self.dismiss(animated: true, completion: nil)
                 //save object on database
                 
             })

@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="3751" y="-215"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Item Table View Controller-->
         <scene sceneID="cJf-dy-wPu">
             <objects>
-                <tableViewController id="rnm-ZM-8yb" sceneMemberID="viewController">
+                <tableViewController id="rnm-ZM-8yb" customClass="MyItemTableViewController" customModule="TimeToBagV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ahi-by-A7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://github.com/Marxon13/M13Checkbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2t-Zq-iXi">
-                                            <rect key="frame" x="8" y="8" width="317" height="34"/>
+                                            <rect key="frame" x="8" y="8" width="298" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -309,7 +309,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="My Bags" image="home-7" id="hvV-yN-zTa"/>
                     <connections>
-                        <segue destination="rnm-ZM-8yb" kind="show" id="O0P-RV-ZOp"/>
+                        <segue destination="rnm-ZM-8yb" kind="show" identifier="myItemTableSegue" id="O0P-RV-ZOp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgQ-9Q-FUq" userLabel="First Responder" sceneMemberID="firstResponder"/>

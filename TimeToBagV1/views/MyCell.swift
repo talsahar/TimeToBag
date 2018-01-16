@@ -7,15 +7,18 @@
 //
 
 import UIKit
-
+protocol MyCellDelegate{
+    func onCellClicked(index:Int)
+}
 class MyCell: UITableViewCell {
 
+    var index:Int?
     @IBOutlet weak var cellBackground: UIImageView!
     @IBOutlet weak var topLeftLabel: UILabel!
     @IBOutlet weak var bottomLeftLabel: UILabel!
     @IBOutlet weak var topRightLabel: UILabel!
     @IBOutlet weak var bottomRightLabel: UILabel!
-    
+    var delegate:MyCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,10 +34,13 @@ class MyCell: UITableViewCell {
         self.transform=CGAffineTransform(scaleX: 1.1, y: 1.1)
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 6, options: .allowUserInteraction, animations: {
             self.transform=CGAffineTransform.identity
-            
+            self.delegate?.onCellClicked(index: self.index!)
         }, completion: nil)
         super.touchesBegan(touches, with: event)
     }
+	
+
+    
     
     @IBInspectable var borderWidth: CGFloat = 0.0{
         didSet{
