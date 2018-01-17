@@ -34,8 +34,6 @@ class HomeTabTableViewController: UITableViewController, MyCellDelegate{
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
  
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-             }
   
     func onCellClicked(index: Int) {
         selectedIndex=index
@@ -54,7 +52,6 @@ class HomeTabTableViewController: UITableViewController, MyCellDelegate{
     
 //cell creation
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
 return bagsData.count
     }
 
@@ -74,7 +71,6 @@ return bagsData.count
         cell.bottomLeftLabel.text=bag.vacationType?.rawValue
         cell.bottomRightLabel.text=bag.weather?.rawValue
         cell.clipsToBounds = true
-                // Configure the cell...
         return cell
     }
     
